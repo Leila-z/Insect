@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1605735e-9278-4e18-9011-45ea39df174d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/gh-pages.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/elements/Contact.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/elements/Contact.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/elements/Slide.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/elements/Slide.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/elements/insects/Insect-item.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/elements/insects/Insect-item.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/icons/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/icons/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/icons/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/icons/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/icons/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/icons/3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/icons/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/icons/4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/icons/back.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/icons/back.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/icons/contact.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/icons/contact.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/slide/home.jpeg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +80,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1622090306745</updated>
-      <workItem from="1622090311680" duration="3353000" />
+      <workItem from="1622090311680" duration="4501000" />
     </task>
     <servers />
   </component>

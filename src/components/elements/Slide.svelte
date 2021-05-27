@@ -111,7 +111,7 @@
 <style scoped>
     .slide {
         position: relative;
-        background: url("/assets/slide/home.jpeg") no-repeat center bottom fixed;
+        background: url("/assets/slide/home.jpg") no-repeat center bottom fixed;
         background-size: cover;
         height: 100vh;
         width: 100%;

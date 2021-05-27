@@ -147,7 +147,7 @@
                 <div class="d-flex d-flex__aline-center">
                     <img
                             class="insectsInfo__item--header--logo"
-                            src="assets/logo.svg"
+                            src="/assets/logo.svg"
                             alt="insect"
                     />
                     <span class="insectsInfo__item--header--titre"
@@ -157,7 +157,7 @@
                 <button on:click={handleShow}>
                     <img
                             class="insectsInfo__item--header--back"
-                            src="assets/icons/back.png"
+                            src="/assets/icons/back.png"
                             alt="insect"
                     />
                 </button>

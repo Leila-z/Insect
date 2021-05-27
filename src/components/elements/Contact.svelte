@@ -28,12 +28,12 @@
             width
         });
 
-        tl.to(img, 2, {
+        tl.to(img, 1.2, {
             ease: "power2.inOut",
             width: "50%",
         });
 
-        tl.to(icon, 1.2, {
+        tl.to(icon, 1, {
             ease: "power2.inOut",
             opacity: 1,
             width: "5rem",
@@ -53,14 +53,14 @@
 <div class="contact">
     <div class="container">
         <div class="contact__titre">
-            <img class="contact__titre--icon" src="assets/icons/contact.png" alt="insect"/>
+            <img class="contact__titre--icon" src="/assets/icons/contact.png" alt="insect"/>
             <span class="contact__titre--text">با ما در ارتباط باشید </span>
         </div>
     </div>
     <div class="container">
         <div class="contact__element">
             <div class="contact__element--text">
-                <img class="contact__element--logo" src="assets/logo.svg" alt="insect"/>
+                <img class="contact__element--logo" src="/assets/logo.svg" alt="insect"/>
                 <h1>ما حشرات رو دوست داریم ولی انسان ها رو بیشتر</h1>
                 <div class="contact__element--line"/>
                 <div class="contact__element--ways">
@@ -69,7 +69,7 @@
                         <img
                                 class="contact__element--ways--icon"
                                 bind:this={img}
-                                src="assets/contact/telephone.png"
+                                src="/assets/contact/telephone.png"
                                 alt="insect"
                         />
                         <span>۰۳۱ - ۵۵۴۴۸۸۹۹ , ۵۵۴۴۸۸۳۳</span>
@@ -79,7 +79,7 @@
                         <img
                                 class="contact__element--ways--icon"
                                 bind:this={img}
-                                src="assets/contact/mobile.png"
+                                src="/assets/contact/mobile.png"
                                 alt="insect"
                         />
                         <span>۰۹۱۳۷۷۷۸۸۷۷ , ۰۹۱۲۲۲۲۴۴۶۶</span>
@@ -87,15 +87,15 @@
 
                     <div class="contact__element--ways--social">
                         <a href="/">
-                            <img bind:this={img} src="assets/contact/whatsapp.png" alt="insect"/>
+                            <img bind:this={img} src="/assets/contact/whatsapp.png" alt="insect"/>
                         </a>
 
                         <a href="/">
-                            <img bind:this={img} src="assets/contact/telegram.png" alt="insect"/>
+                            <img bind:this={img} src="/assets/contact/telegram.png" alt="insect"/>
                         </a>
 
                         <a href="/">
-                            <img bind:this={img} src="assets/contact/instagram.png" alt="insect"/>
+                            <img bind:this={img} src="/assets/contact/instagram.png" alt="insect"/>
                         </a>
                     </div>
                 </div>
@@ -104,14 +104,14 @@
                 <img
                         class="contact__element--img"
                         bind:this={img}
-                        src="assets/contact/5.jpg"
+                        src="/assets/contact/5.jpg"
                         alt="insect"
                 />
 
                 <div class="contact__element--icon" bind:this={icon}>
                     <img
                             class="contact__element--icon--img"
-                            src="assets/contact/phone.png"
+                            src="/assets/contact/phone.png"
                             alt="insect"
                     />
                 </div>
