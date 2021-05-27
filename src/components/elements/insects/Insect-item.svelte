@@ -76,7 +76,6 @@
 
         tl.set(parent, {
             position: "fixed",
-            alignItems: 'start',
             zIndex: 900,
             width,
             height,
@@ -105,7 +104,9 @@
 
         tl.to(parent.querySelector('article'), {
             ease: "power2.inOut",
-        },0);
+            transform: "translateY(0)",
+            top:'0'
+        }, 0);
 
         tl.to(parent.querySelector(".insectsInfo__item--body"),
                 1,
@@ -177,7 +178,6 @@
 <style scoped>
     .insectsInfo__item {
         display: flex;
-        align-items: center;
         justify-content: space-between;
         background: #fff;
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
@@ -209,19 +209,24 @@
 
     .insectsInfo__item > article {
         padding: 1rem 4%;
-        width: calc(50% - 2rem);
+        width: 50%;
+        top: 50%;
+        position: relative;
+        box-sizing: border-box;
+        transform: translateY(-35%);
     }
 
     .insectsInfo__item--title {
         font-size: 2rem;
         position: relative;
         font-family: "dana-bold";
+        display: flex;
     }
 
     .insectsInfo__item--title:after {
         content: "";
         position: absolute;
-        width: 35%;
+        width: 25%;
         height: 2px;
         background: #000;
         bottom: -6px;
