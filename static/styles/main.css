@@ -1,0 +1,47 @@
+@import "./reset.css";
+@import "./all.css";
+@import "./fonts.css";
+@import "./variables.css";
+
+html {
+    font-size: 100%;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--font-first);
+    direction: rtl;
+    background-color: var(--color-third);
+    font-size: 0.9rem;
+    height: 100%;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 84rem;
+    width: calc(100% - var(--margin-container));
+    margin: 0 auto;
+    position: relative;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-flex__aline-center {
+    align-items: center;
+}
+
+.d-flex__justify-center {
+    justify-content: center;
+}
+
+.d-flex__column {
+    flex-direction: column;
+}

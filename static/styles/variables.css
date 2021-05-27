@@ -1,0 +1,15 @@
+:root {
+  --color-primary: #06e5ff;
+  --color-secondary: rgb(22, 20, 119);
+
+  --color-first: #fff;
+  --color-second: #000000;
+  --color-third: #eeeded;
+  --color-fourth: rgba(22, 20, 119, 0.13);
+
+  --shadow-first: 0 0.9em 3.2em rgba(0, 0, 0, 0.09);
+
+  --font-first: "dana-light", sans-serif;
+
+  --margin-container: 8rem;
+}
