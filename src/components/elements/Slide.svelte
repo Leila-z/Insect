@@ -7,16 +7,8 @@
 
   import { onMount } from "svelte";
 
-  let title, insects;
 
   onMount(() => {
-    const { width, height, top, left } = title.getBoundingClientRect();
-    console.log(width, height, top, left);
-    insects = document.querySelector(".slide__insects");
-    insects.style.height = height;
-    insects.style.width = width;
-    insects.style.top = top;
-    insects.style.left = left;
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -57,7 +49,7 @@
 </script>
 
 <div class="slide" id="hero">
-  <h1 class="header__text parallax" data-depth="0.4" bind:this={title}>
+  <h1 class="header__text parallax" data-depth="0.4" >
     ما حشرات رو دوست داریم ولی انسان ها رو بیشتر
   </h1>
   <img
