@@ -55,7 +55,7 @@
 
   .insectsInfo {
     padding: 2.5rem 0;
-    height: 100vh;
+    /*height: 100vh;*/
     position: relative;
   }
 
@@ -76,5 +76,11 @@
     align-items: center;
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    .insectsInfo__items {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 </style>
