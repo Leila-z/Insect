@@ -8,10 +8,13 @@
 
     let img, icon;
 
-    onMount(() => HandleImg());
+    onMount(() =>
+
+            HandleImg()
+    );
 
     function HandleImg() {
-        const {width} = img.getBoundingClientRect();
+        const {width, height} = img.getBoundingClientRect();
 
         const tl = gsap.timeline({
             scrollTrigger: {
@@ -19,34 +22,43 @@
                 scrub: 1,
             },
         });
+        if (window.innerWidth > 1200) {
+            tl.set(img, {
+                width
+            });
 
-        tl.set(img, {
-            width
-        });
+            tl.set(icon, {
+                width
+            });
 
-        tl.set(icon, {
-            width
-        });
+            tl.to(img, 2, {
+                ease: "power2.inOut",
+                width: "100%",
+            });
 
-        tl.to(img, 2, {
-            ease: "power2.inOut",
-            width: "50%",
-        });
+            tl.to(icon, 1.2, {
+                ease: "power2.inOut",
+                opacity: 1,
+                width: "5rem",
+            });
 
-        tl.to(icon, 1.2, {
-            ease: "power2.inOut",
-            opacity: 1,
-            width: "5rem",
-        });
+            tl.to(document.querySelector('.contact__element--icon--img'), {
+                ease: "power2.inOut",
+                opacity: 1
+            });
 
-        tl.to(document.querySelector('.contact__element--icon--img'), {
-            ease: "power2.inOut",
-            opacity: 1
-        });
-
-        ScrollTrigger.create(document.querySelector('.contact',
-                tl.play()
-        ));
+            ScrollTrigger.create(document.querySelector('.contact',
+                    tl.play()
+            ));
+        } else {
+            tl.set(img, {
+                height
+            });
+            tl.to(img, 2, {
+                ease: "power2.inOut",
+                height: "200%",
+            });
+        }
     }
 </script>
 
@@ -100,20 +112,22 @@
                     </div>
                 </div>
             </div>
-            <div>
-                <img
-                        class="contact__element--img"
-                        bind:this={img}
-                        src="assets/contact/5.jpg"
-                        alt="insect"
-                />
-
-                <div class="contact__element--icon" bind:this={icon}>
+            <div class="contact__element--parent">
+                <div class="contact__element--child">
                     <img
-                            class="contact__element--icon--img"
-                            src="assets/contact/phone.png"
+                            class="contact__element--img"
+                            bind:this={img}
+                            src="assets/contact/5.jpg"
                             alt="insect"
                     />
+
+                    <div class="contact__element--icon" bind:this={icon}>
+                        <img
+                                class="contact__element--icon--img"
+                                src="assets/contact/phone.png"
+                                alt="insect"
+                        />
+                    </div>
                 </div>
             </div>
         </div>
@@ -147,6 +161,7 @@
         padding: 3rem;
         display: flex;
         position: relative;
+        align-items: center;
     }
 
     .contact__element--text {
@@ -169,7 +184,7 @@
 
     .contact__element--img {
         width: 0;
-        height: 77.5%;
+        height: 100%;
         position: absolute;
         object-fit: cover;
         z-index: 2;
@@ -177,11 +192,11 @@
     }
 
     .contact__element--icon {
-        position: relative;
+        position: absolute;
         width: 0;
         background: #f3f3f3;
         height: 4.5rem;
-        right: 32.3rem;
+        right: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -237,5 +252,54 @@
     .contact__element--ways--social {
         text-align: center;
         margin-top: 2rem;
+    }
+
+    .contact__element--child {
+        width: 100%;
+        position: relative;
+        height: 100%;
+    }
+
+    .contact__element--parent {
+        position: absolute;
+        left: -4.5rem;
+        width: 50%;
+        height: calc(100% - 8rem);
+    }
+
+    @media screen and (max-width: 1200px) {
+        .contact__element {
+            background-color: #dee0df;
+            height: 60vh;
+            width: calc(100% - 8rem);
+            padding: 5rem;
+            display: flex;
+            position: relative;
+            justify-content: center;
+            margin: unset;
+            flex-direction: column;
+        }
+
+        .contact__element--text {
+            width: 100%;
+            border-bottom: 7px solid #a9d3de;
+            border-left: unset;
+        }
+
+        .contact__element--parent {
+            position: relative;
+            width: calc(100% + 4rem);
+            height: 100%;
+            left: unset;
+        }
+
+        .contact__element--img {
+            width: 100%;
+            height: 0;
+        }
+
+        .contact__element--icon {
+            display: none;
+        }
     }
 </style>

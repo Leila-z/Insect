@@ -7,7 +7,27 @@
 
     import {onMount} from "svelte";
 
+    let title , insects;
+
     onMount(() => {
+        const {width, height ,top , left} = title.getBoundingClientRect();
+console.log(width, height ,top , left)
+        insects = document.querySelector('.slide__insects');
+        insects.style.height = height;
+        insects.style.width = width;
+        insects.style.top = top;
+        insects.style.left = left;
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#hero",
+                start: "top top",
+                end: window.innerHeight,
+                scrub: 1,
+            },
+        });
+
+
         // const scroller = document.querySelector('body');
         // //
         // const bodyScrollBar = Scrollbar.init(scroller, {damping: 0.1, delegateTo: document, alwaysShowTracks: true});
@@ -28,14 +48,7 @@
         //
         // ScrollTrigger.defaults({scroller: scroller});
 
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: "#hero",
-                start: "top top",
-                end: window.innerHeight,
-                scrub: 1,
-            },
-        });
+
         // tl.addLabel('start').to(".parallax",{y:100}).addLabel('end')
         gsap.utils.toArray(".parallax").forEach((layer) => {
             const depth = layer.dataset.depth;
@@ -46,7 +59,7 @@
 </script>
 
 <div class="slide" id="hero">
-    <h1 class="header__text parallax" data-depth="0.4">
+    <h1 class="header__text parallax" data-depth="0.4" bind:this={title}>
         ما حشرات رو دوست داریم ولی انسان ها رو بیشتر
     </h1>
     <img
@@ -56,7 +69,7 @@
             src="assets/slide/man.png"
     />
     <img class="slide__grass" alt="man slide" src="assets/slide/grass.png"/>
-    <div class="slide__insects">
+    <div class="slide__insects" >
         <img
                 class="slide__insects--Bee parallax"
                 data-depth="0.05"
@@ -135,11 +148,11 @@
     }
 
     .slide__grass {
-        position: relative;
+        position: absolute;
         width: 100%;
-        bottom: 1.5rem;
-        transform: translateY(100%);
-        filter: drop-shadow(1px 0px 6px rgba(0, 0, 0, 0.5)نشد);
+        bottom: 0;
+        transform: translateY(40%);
+        filter: drop-shadow(1px 0px 6px rgba(0, 0, 0, 0.5));
         z-index: 9;
     }
 
@@ -226,5 +239,45 @@
         justify-content: center;
         align-items: center;
         z-index: 2;
+    }
+
+    .slide__insects {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+        .slide__grass {
+            transform: translateY(5%);
+        }
+
+        .header__text {
+            font-size: 3rem;
+        }
+
+        .slide__insects--butterfly--2.parallax {
+            bottom: 44rem;
+        }
+
+        .slide__insects--Bee--2.parallax {
+            bottom: 69.3rem;
+        }
+
+        .slide__insects--Bee.parallax {
+            bottom: 44.2rem;
+        }
+
+        .slide__insects--butterfly.parallax {
+            bottom: 60rem;
+        }
+
+        .slide__insects--bug--2.parallax {
+            bottom: 33rem;
+        }
+
+        .slide__insects--bug.parallax {
+            bottom: 40rem;
+        }
     }
 </style>

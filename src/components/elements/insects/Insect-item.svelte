@@ -105,7 +105,7 @@
         tl.to(parent.querySelector('article'), {
             ease: "power2.inOut",
             transform: "translateY(0)",
-            top:'0'
+            top: '0'
         }, 0);
 
         tl.to(parent.querySelector(".insectsInfo__item--body"),
@@ -181,7 +181,7 @@
         justify-content: space-between;
         background: #fff;
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-        height: 20rem;
+        height: 38vh;
         z-index: 2;
         overflow: hidden;
     }
@@ -211,9 +211,10 @@
         padding: 1rem 4%;
         width: 50%;
         top: 50%;
-        position: relative;
+        position: absolute;
         box-sizing: border-box;
-        transform: translateY(-35%);
+        transform: translateY(-50%);
+        left: 0;
     }
 
     .insectsInfo__item--title {
@@ -263,5 +264,11 @@
 
     .insectsInfo__item--header--logo {
         width: 4rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        .insectsInfo__item {
+            height: 34vh
+        }
     }
 </style>

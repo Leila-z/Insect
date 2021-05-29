@@ -12,6 +12,13 @@
       <executable />
     </execution>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectId" id="1t6X2fC9p27KFJVdbW79fBeTgiC" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -73,10 +80,10 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="476" y="260" key="com.intellij.ide.util.TipDialog/0.0.1600.870@0.0.1600.870" timestamp="1622090310538" />
-    <state x="486" y="151" width="758" height="568" key="find.popup" timestamp="1622090919347">
+    <state x="486" y="151" width="758" height="568" key="find.popup" timestamp="1622102766982">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state x="486" y="151" width="758" height="568" key="find.popup/0.0.1600.870@0.0.1600.870" timestamp="1622090919347" />
+    <state x="486" y="151" width="758" height="568" key="find.popup/0.0.1600.870@0.0.1600.870" timestamp="1622102766982" />
     <state x="456" y="198" key="run.anything.popup" timestamp="1622091927929">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
