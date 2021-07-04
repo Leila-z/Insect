@@ -124,11 +124,17 @@
 <style scoped>
     .slide {
         position: relative;
-        background: url("/assets/slide/home-1.jpg") no-repeat center fixed;
+        background-attachment: fixed;
+        background: transparent;
+        background-image: url("/assets/slide/home-1.jpg");
         background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
         height: 100vh;
         width: 100%;
         overflow: hidden;
+        margin: auto;
+        display: flex;
     }
 
     .slide:before {
