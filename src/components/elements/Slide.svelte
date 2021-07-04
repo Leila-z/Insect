@@ -264,4 +264,10 @@
             width: 65%;
         }
     }
+
+    @media screen and (orientation: landscape) {
+        .slide {
+            height: calc(2 * 100vh);
+        }
+    }
 </style>

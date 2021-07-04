@@ -172,7 +172,13 @@
                 top: 0,
                 left: 0,
             }).then(() => {
-                handelHeader()
+                handelHeader();
+                if (window.innerHeight < window.innerWidth) {
+                    tl.set(parent, {
+                                overflowY: 'scroll'
+                            }
+                    );
+                }
             });
 
             tl.to(parent.querySelector('article'), {
@@ -196,16 +202,29 @@
                     },
                     "-=0.3"
             );
-            tl.to(parent.querySelector(".insectsInfo__item--image"),
-                    1,
-                    {
-                        ease: "power2.inOut",
-                        height: '50%',
-                        width: "100%"
-                    },
-                    0
-            );
 
+            if (window.innerHeight < window.innerWidth) {
+                tl.to(parent.querySelector(".insectsInfo__item--image"),
+                        1,
+                        {
+                            ease: "power2.inOut",
+                            height: '85%',
+                            width: "100%"
+                        },
+                        0
+                );
+
+            } else {
+                tl.to(parent.querySelector(".insectsInfo__item--image"),
+                        1,
+                        {
+                            ease: "power2.inOut",
+                            height: '50%',
+                            width: "100%"
+                        },
+                        0
+                );
+            }
         }
 
         if (show) {
@@ -365,4 +384,13 @@
         }
     }
 
+    @media screen and (orientation: landscape) {
+        .insectsInfo__item {
+            height: 100vh
+        }
+
+        .insectsInfo__item--body {
+            margin: 1rem 0;
+        }
+    }
 </style>

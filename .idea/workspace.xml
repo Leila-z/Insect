@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1605735e-9278-4e18-9011-45ea39df174d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/commons/Button.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/commons/Button.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/elements/Slide.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/elements/Slide.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/elements/insects/Insect-item.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/elements/insects/Insect-item.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +78,7 @@
       <workItem from="1622523854500" duration="2780000" />
       <workItem from="1623586309962" duration="1596000" />
       <workItem from="1624191077889" duration="295000" />
-      <workItem from="1625387890186" duration="1310000" />
+      <workItem from="1625387890186" duration="3534000" />
     </task>
     <servers />
   </component>
