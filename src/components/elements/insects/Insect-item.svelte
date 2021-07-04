@@ -46,7 +46,40 @@
             "\n" +
             "&nbsp\n" +
             "\n" +
-            "و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.";
+            "و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد." +
+            "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است،\n" +
+            "\n" +
+            "&nbsp\n" +
+            "\n" +
+            "و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده،\n" +
+            "\n" +
+            "&nbsp\n" +
+            "\n" +
+            "شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد،\n" +
+            "\n" +
+            "&nbsp\n" +
+            "\n" +
+            "در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی،\n" +
+            "\n" +
+            "&nbsp\n" +
+            "\n" +
+            "و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد. لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است،\n" +
+            "\n" +
+            "&nbsp\n" +
+            "\n" +
+            "و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده،\n" +
+            "\n" +
+            "&nbsp\n" +
+            "\n" +
+            "شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد،\n" +
+            "\n" +
+            "&nbsp\n" +
+            "\n" +
+            "در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی،\n" +
+            "\n" +
+            "&nbsp\n" +
+            "\n";
+    ;
 
 
     gsap.registerPlugin(TextPlugin);
@@ -62,63 +95,118 @@
             height,
         });
 
+        tl.set(document.querySelector('html'), {
+            overflow: 'hidden'
+        });
+
         tl.set(parent.querySelector('.button'), {
             display: 'none'
         });
 
-        // tl.set(parent.querySelector('.insectsInfo__item--image'), {
-        //     width: "100%"
-        // });
+        if (window.innerWidth > 1100) {
+            tl.set(parent, {
+                position: "fixed",
+                zIndex: 900,
+                width,
+                height,
+                top: 0,
+                left: 0,
+                x: left,
+                y: top,
+            });
 
-        // tl.set(parent.querySelector('article'), {
-        //     padding: '2rem 4rem'
-        // });
+            tl.to(parent, 1.2, {
+                ease: "power2.inOut",
+                width: "100%",
+                height: "100%",
+                x: 0,
+                y: 0,
+                top: 0,
+                left: 0,
+            });
 
-        tl.set(parent, {
-            position: "fixed",
-            zIndex: 900,
-            width,
-            height,
-            top: 0,
-            left: 0,
-            x: left,
-            y: top,
-        });
+            tl.to(parent.querySelector('article'), {
+                ease: "power2.inOut",
+                transform: "translateY(0)",
+                top: '0'
+            }, 0);
 
-        tl.to(parent, 1.2, {
-            ease: "power2.inOut",
-            width: "100%",
-            height: "100%",
-            x: 0,
-            y: 0,
-            top: 0,
-            left: 0,
-        }).then(() => {
-            handelHeader()
-        });
-
-        // tl.to(parent.querySelector('.insectsInfo__item--image'),1.2, {
-        //     ease: "power2.inOut",
-        //     width: '100%'
-        // },0);
-
-        tl.to(parent.querySelector('article'), {
-            ease: "power2.inOut",
-            transform: "translateY(0)",
-            top: '0'
-        }, 0);
-
-        tl.to(parent.querySelector(".insectsInfo__item--body"),
-                1,
-                {
-                    text: {
-                        value: desc,
-                        delimiter: "",
+            tl.to(parent.querySelector(".insectsInfo__item--body"),
+                    1,
+                    {
+                        text: {
+                            value: desc,
+                            delimiter: "",
+                        },
+                        ease: "power2.inOut",
                     },
-                    ease: "power2.inOut",
-                },
-                "-=0.3"
-        );
+                    "-=0.3"
+            ).then(() => {
+                handelHeader();
+                if (parent.querySelector('.insectsInfo__item--body').clientHeight > height)
+                    tl.to(parent.querySelector('article'), 1, {
+                        ease: "power2.inOut",
+                        overflowY: 'scroll'
+                    });
+            })
+        } else {
+
+            tl.set(parent, {
+                position: "fixed",
+                zIndex: 900,
+                width,
+                height,
+                top: 0,
+                left: 0,
+                x: left,
+                y: top,
+            });
+
+            tl.to(parent, 1.2, {
+                ease: "power2.inOut",
+                width: "100%",
+                height: "100%",
+                display: "block",
+                x: 0,
+                y: 0,
+                top: 0,
+                left: 0,
+            }).then(() => {
+                handelHeader()
+            });
+
+            tl.to(parent.querySelector('article'), {
+                ease: "power2.inOut",
+                transform: "translateY(0)",
+                top: '0',
+                height: '50%',
+                width: "100%",
+                position: "relative",
+            }, 0);
+
+            tl.to(parent.querySelector(".insectsInfo__item--body"),
+                    1,
+                    {
+                        text: {
+                            value: desc,
+                            delimiter: "",
+                        },
+                        ease: "power2.inOut",
+                        overflowY: 'scroll'
+                    },
+                    "-=0.3"
+            );
+            tl.to(parent.querySelector(".insectsInfo__item--image"),
+                    1,
+                    {
+                        ease: "power2.inOut",
+                        height: '50%',
+                        width: "100%"
+                    },
+                    0
+            );
+
+        }
 
         if (show) {
             tl.play();
@@ -227,7 +315,7 @@
     .insectsInfo__item--title:after {
         content: "";
         position: absolute;
-        width: 25%;
+        width: 4rem;
         height: 2px;
         background: #000;
         bottom: -6px;
@@ -266,9 +354,15 @@
         width: 4rem;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 900px) {
         .insectsInfo__item {
             height: 34vh
         }
+
+        .insectsInfo__item--header--titre {
+            width: 75%;
+            margin: 0 1rem;
+        }
     }
+
 </style>

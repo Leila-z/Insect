@@ -9,7 +9,7 @@
 
 <style>
   .button__more--icon {
-    width: 10%;
+    width: 2rem;
     margin-right: 0.5rem;
   }
 </style>
