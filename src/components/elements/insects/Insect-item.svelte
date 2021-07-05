@@ -208,7 +208,7 @@
                         1,
                         {
                             ease: "power2.inOut",
-                            height: '85%',
+                            height: '80%',
                             width: "100%"
                         },
                         0
@@ -384,9 +384,9 @@
         }
     }
 
-    @media screen and (orientation: landscape) {
+    @media screen and (orientation: landscape) and (max-width: 768px) {
         .insectsInfo__item {
-            height: 100vh
+            height: 70vh
         }
 
         .insectsInfo__item--body {

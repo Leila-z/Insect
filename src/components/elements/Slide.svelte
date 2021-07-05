@@ -265,9 +265,21 @@
         }
     }
 
-    @media screen and (orientation: landscape) {
-        .slide {
-            height: calc(2 * 100vh);
+    @media screen and (orientation: landscape) and (max-width: 768px) {
+        .header__text {
+            top: 0;
+            transform: scale(0.7);
+        }
+
+        .slide__grass {
+            transform: translateY(50%);
+        }
+
+        .slide__man {
+            position: absolute;
+            bottom: -1rem;
+            left: 7%;
+            width: 5.6rem;
         }
     }
 </style>
