@@ -388,9 +388,5 @@
         .insectsInfo__item {
             height: 70vh
         }
-
-        .insectsInfo__item--body {
-            margin: 1rem 0;
-        }
     }
 </style>
