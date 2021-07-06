@@ -339,12 +339,15 @@
         background: #000;
         bottom: -6px;
         right: 0;
+        top: unset;
     }
 
     .insectsInfo__item--body {
-        margin: 2rem 0;
+        margin: 2rem 0 0 0;
         text-align: justify;
         line-height: 1.6;
+        position: relative;
+        height: 100%;
     }
 
     .insectsInfo__item--header {
